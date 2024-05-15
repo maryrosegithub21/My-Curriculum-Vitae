@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" /> -->
+    <title>My Curriculum Vitae</title>
+</head>
+<body >
+   <!--=========== header Photo ============-->
+    <header>
+
+        <div class="parentheader" id="parentheader">
+            <div class="childheader"><h2>Programmers Can Create New World in Coding</h2></div>
+            <img id="imgheader" src="Images/Header.jpg"  alt="programmer background"/>
+        
+        </div>
+        
+        
+      
+    </header>
+     <!--============ button ===========-->
+    <nav>
+        <ul>
+        <li class="btn nav-link" id="home"><a href="#parentheader">Home</a></li> 
+        <li class="btn nav-link" id="about"><a href="#right">About</a></li> 
+        <li class="btn nav-link" id="resume"><a href="https://drive.google.com/file/d/16MQ0ZrflIoX31oN3c6gPzgFoFvxCMTO9/view?usp=drive_link">Resume</a></li> 
+        <li class="btn nav-link" id="contact"><a href="#left" onclick="togglemenu()">Contact</a></li> 
+        <li class="btn nav-link" id="portfolio"><a href="https://github.com/maryrosegithub21">Portfolio</a></li>   
+        </ul>
+    </nav>
+    
+    <main>
+        <!--=========== left Section ========== -->
+        <section id="left">
+        <h1>Hi I'm Mary Rose Antonio <br> Full Stack Software Developer</h1>
+        <p>I am passionate about creating applications with a combination of logic and design to make accessible and user friendly. Technology moves toward and new applications are coming from time to time. Diversity in technology and industry is really important to me and I'm excited to continue my skills. </p>
+        
+        <button class="btn chat-btn" onclick="togglemenu()">Let's Chat</button>       
+        <form id ="chatList" action="mailto:maryroseantoniowork21@gmail.com" method="post">
+            <div id="contact">
+            <a href="https://www.seek.co.nz/profile/maryrose-antonio-rDqwRr3KiO" ><img src="Images/Seek.JPG" id="seek"/></a>
+            <a href="https://www.linkedin.com/in/mary-rose-antonio-321629263/" ><img src="Images/linked.JPG" id="linked_in"/></a>
+            </div>
+            <label>Name:</label><input type="text" name="name" placeholder="Fill in Name"/><br>
+            <label>Email:</label><input type="email" name="email" placeholder="abc@..."/><br>
+            <label>Phone:</label><input type="phone" name="phone" placeholder="number"/><br>
+            <input type="submit" value="Email">
+        </form>
+        <div class="divleft">
+
+        </div>
+        </section>
+        <br>
+        
+   <!-- =========== right section ============= -->
+   
+        <section id="right">      
+            <div class="divright">
+                
+                
+                <br>
+                <p>I finished Bachelor of Science in Computer Science, Focusing on creating application for front and back end web application. I also built some application in LAN when I was studying. Some of this are library system, payroll system, matching puzzle battle game and more. I also learned the algorithm, flowchart, data flow diagram and more. Creativity is my passion and I love working independently or in a team. Self Starter with the ability to set and meet objectives with high sensitive to confidentiality of all company products</p> 
+            
+                
+
+
+
+        </div>
+    </section>
+
+
+    </main>
+    <div id="contact">
+
+    </div>
+    <!--=========== Footer ========== -->
+ <footer>
+    <h3>Copyright 2024 by Mary Rose Antonio, All rights</h3>
+    <!-- <i class="fa-brands fa-square-facebook"></i>
+    <i class="fa-brands fa-linkedin"></i> -->
+</footer>
+</body>
+
+<!-- ============== Email Chat List ======== -->
+<script>
+ 
+    var chatList = document.getElementById("chatList");
+    chatList.style.maxHeight = "0px";
+    function togglemenu() {
+      if(chatList.style.maxHeight === "0px") 
+      {
+        chatList.style.maxHeight = "180px";
+      }
+      else 
+      {
+        chatList.style.maxHeight = "0px";
+      }
+    }
+</script>
+
+</html>
