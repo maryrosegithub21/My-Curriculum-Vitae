@@ -1,49 +1,249 @@
-
-* {
-  box-sizing: border-box;
-  /* background: linear-gradient(white, grey); */
+*{
+    box-sizing: border-box;
+    font-family: Franklin Gothic Medium;
+    
 }
-body {
-    font-family: sans-serif;
-    margin-top: 0;
-    position: relative;
-    /* background-color:black; */
-    background: linear-gradient(whitesmoke gray)
-  }
- 
 
-   /* ================= Main Section ============== */
-   main {
+body{
+    margin: 0;
+}
+
+/* ====== main ======= */
+main {
+  /* display: grid; */
+  /* display: flex; */
+  display: flex;
+  justify-content: center;
+  margin: 20px 100px;
+ }
+#parent{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    border: 4px solid black;
+    /* height:50%; */
+    /* width: 100%; */
+    grid-gap: 20px;
+
+
+}
+#child-el1{
+background-color: antiquewhite;
+/* height: 100px; */
+/* height:100%;
+width: 100%; */
+display: flex;
+align-items: center;
+justify-content: center;
+position:relative;
+
+}
+#child-el2{
+background-color: rgb(184, 10, 178);
+display: flex;
+align-items: center;
+justify-content: center;
+position:relative;
+
+
+}
+#child-el3{
+    background-color: rgb(92, 46, 2);
     display: flex;
-    flex-wrap: none;
-    background-color: black;
     align-items: center;
-    margin: 10px 100px;
+    justify-content: center;
+    position:relative;
+
+
+}
+#child-el4{
+        background-color: rgb(6, 6, 6);
+        /* grid-column: 2/4; */
+        display: flex;
+align-items: center;
+justify-content: center;
+position:relative;
+
+
+}
+/* ========small screen======= */
+@media screen and (max-width:600px){
+ #parent{ 
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  border: 1px solid black;
+  position:absolute;
+  justify-content: center;
+  grid-gap: 1px;
   
-  }  
-@media screen and (max-width: 768px){
-  nav, main{
-      flex-direction: row;
-     
+
+}
+}
+
+@media screen and (max-width: 600px){
+  #child-el1 {
+    font-size: 15px;
+    /* display:flex; */
+    justify-content: center;
+    align-items: center;
+    position:relative;
   }
 }
 @media screen and (max-width: 600px){
-   main h1{
-      font-size: 15px;
-      display: flex;
-      justify-content: center;
-      
-    }
+  #child-2 {
+    /* font-size: 15px; */
+    /* display:flex; */
+    justify-content: center;
+    align-items: center;
+    position:relative;
   }
-  @media screen and (max-width: 600px){
-    main p{
-       font-size: 12px;
-       display: flex;
-       justify-content: center;
-       text-align: justify;
-     }
-   }
+}
+@media screen and (max-width: 600px){
+  #child-el3 {
+    /* font-size: 15px; */
+    /* display:flex; */
+    justify-content: center;
+    align-items: center;
+    position:relative;
+  }
+}
+@media screen and (max-width: 600px){
+  #child-4 {
+    font-size: 15px;
+    /* display:flex; */
+    justify-content: center;
+    align-items: center;
+    position:relative;
+  }
+}
+
+/* ======== grandchild ======= */
+#grandchild1{
+  background-color: black;
+  margin: 5px 5px;
+  width: 90%;
+  height: 90%;
+  position: relative;
+
+}
+#grandchild1 a{
+  text-decoration: none;
+  list-style: none;
+  color:white;
+}
+#grandchild1 h1{
+  margin: 35px 10px;
+  color:white;
+  padding: 10px;
   
+}
+#grandchild1 p{
+    margin: 35px 10px;
+    color: white;
+    text-align: justify;
+    text-indent: 25px;
+    color: white;
+    padding: 10px;
+}
+#grandchild2{
+  margin: 2px 2px;
+  width: 90%;
+  position: relative;
+}
+#imagegrandchild2{
+  height: 320px;
+  border: 8px solid rgb(15, 8, 8);
+  object-fit: cover;
+  object-position: 50% 50%;
+  background-color: rgb(8, 8, 8);
+  animation-name: box;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; 
+  border-radius: 10%;
+  position:relative;
+}
+
+#grandchild3{
+  margin: 2px 2px;
+  width: 90%;
+  position: relative;
+text-align: left;
+}
+#imagegrandchild3{
+  height: 350px;
+  border: 8px solid rgb(15, 8, 8);
+  object-fit: cover;
+  object-position: 50% 50%;
+  background-color: rgb(8, 8, 8);
+  animation-name: box;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; 
+  border-radius: 50%;
+}
+.imagetext3{
+  background-color: rgb(231, 132, 3);
+  position: fixed;
+  margin: 5px 5px;
+  padding: 0;
+  color:white;
+  position: absolute;
+  font-size: 15px;
+  top: 30%;
+  left: 55%;
+}
+/* ======= Animation=========== */
+@keyframes box{
+  0%{background-color: rgb(251, 250, 250); }
+  25% {background-color:rgb(177, 176, 177); } 
+  50% {background-color:rgb(123, 123, 123);  } 
+  75% {background-color:rgb(39, 38, 38); } 
+  100% {background-color:rgb(18, 18, 18);  } 
+  0%{border-color: rgb(162, 160, 160); }
+  25% {border-color:rgb(133, 132, 133);  } 
+  50% {border-color:rgb(80, 81, 80);   } 
+  75% {border-color:rgb(39, 38, 38); } 
+  100% {border-color:rgb(7, 7, 7); } 
+}
+
+#grandchild4{
+  background-color: rgb(234, 5, 5);
+  margin: 5px 5px;
+  width: 90%;
+  height: 90%;
+  color: white;
+  position: relative;
+}
+#grandchild4 p{
+  display:flex;
+ width: 100%;
+  color: white;
+  text-indent: 30px;
+text-align: justify;
+padding: 15px;
+}
+
+.chat-btn{
+  display: block;
+    margin: 0px 0px;
+    padding: 14px 25px;
+    width: 200px;
+    font-weight: 700;
+    border: none;
+    background-color: black;
+    color:white;
+  
+}
+.chat-btn:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  display: block;
+}
+
+
+/* =======Header Part====== */
   /* ================ Header Section ================ */
   header {
     display: flex;
@@ -214,78 +414,6 @@ nav{
       margin: 1px 1px;
     }
   }
-
-  
-  /* ============== Left Section ============== */
-  #left {
-    background-color: black;
-    margin: 5px 5px;
-    width: 50%;
-  }
-  a{
-    /* text-decoration: none; */
-    text-decoration: none;
-    list-style: none;
-  }
-  h1 {
-    color:white;
-    margin: 35px 10px;
-  }
-
-  p {
-    margin: 35px 10px;
-    color: white;
-    text-align: justify;
-    text-indent: 25px;
-  }
-  
-  
-  .chat-btn {
-    display: block;
-    margin: 0px 0px;
-    padding: 14px 25px;
-    width: 200px;
-    /* font-family: inherit; */
-    font-weight: 700;
-    border: none;
-    background-color: black;
-    color:white;
-  
-  }
-  @media screen and (max-width: 600px){
-    .chat-btn{
-      font-size: 15px;
-      width: 132px;
-  
-    }
-  }
-  
-  .chat-btn:hover {
-    background-color: white;
-    color: black;
-    cursor: pointer;
-    display: block;
-  }
-.divleft{
-    margin: 10px 10px;
-    width: 95%;
-    /* filter: grayscale(90%); */
-    border-radius: 10px;
-    background-image: url("Images/ImgLeft.jpg");
-    height: 350px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    border: 5px solid rgb(15, 8, 8);
-    object-fit: cover;
-    object-position: 50% 50%;
-    background-color: rgb(8, 8, 8);
-    animation-name: box;
-    animation-duration: 10s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    
-}
 /*====================== form chat ======================= */
 #chatList {
   overflow: hidden;
@@ -343,83 +471,13 @@ input[type="submit"]:hover{
 #linked_in:hover{
   cursor: pointer;
 }
-
-
-  /* ===================== Right Section ====================== */
-  #right {
-    margin: 0px 10px;
-    width: 50%;
-    background-image: url("Images/ImgRight.jpg");
-    border-radius: 10px;
-    height: 620px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: top;
-    border: 5px solid rgb(15, 8, 8);
-    object-fit: cover;
-    object-position: 50% 50%;
-    background-color: rgb(57, 57, 57);
-    border-color: 10px solid rgb(57, 57, 57);
-    animation-name: box;
-    animation-duration: 10s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    position: relative;
-    
-    
-}
-
-@keyframes box{
-    0%{background-color: rgb(251, 250, 250); }
-    25% {background-color:rgb(177, 176, 177); } 
-    50% {background-color:rgb(123, 123, 123);  } 
-    75% {background-color:rgb(39, 38, 38); } 
-    100% {background-color:rgb(18, 18, 18);  } 
-    0%{border-color: rgb(162, 160, 160); }
-    25% {border-color:rgb(133, 132, 133);  } 
-    50% {border-color:rgb(80, 81, 80);   } 
-    75% {border-color:rgb(39, 38, 38); } 
-    100% {border-color:rgb(7, 7, 7); } 
-}
-
- 
- .divright{
-  background-color: black;
-  width: 100%;
-  position: absolute;
-  bottom: 800px;
-  right: 0px;
-  justify-content: center;
-  bottom: 0;
-  color: white;
-  font-size-adjust: inherit;
-  display: inline;
-}
-
-  
-.divright > p{
-  text-align: justify;
-  text-indent: 50px; 
-}
-
-@media screen and (max-width: 600px){
-.divright > p{
-  font-size: 10px;
-  text-align: justify;
-  margin-bottom: 0px;
-  padding-bottom: 0px;
-  margin: 5px 0px;
-  width: 100%;
-}
-} 
-
 /* =========Footer============== */
 footer {
   display: flex;
   justify-content: center;
   margin: 20px 100px;
   background-color: black;
-  text-decoration: none;
+  /* text-decoration: none; */
   text-align: center;
   color: white;
 }
@@ -431,3 +489,4 @@ footer {
      
    }
  }
+
