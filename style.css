@@ -143,9 +143,18 @@ position:relative;
     }
     
     }
+    @media screen and (max-width: 500px){
+      #grandchild4 p {
+        font-size: 13px;
+        display:flex;
+width: 100%;
+color: white;
+text-indent: 30px;
+text-align: justify;
+padding: 5px;
 
-
-    
+    }
+  }
 
 /* ======== grandchild ======= */
 #grandchild1{
@@ -579,3 +588,4 @@ footer h3{
     
      
    }
+  }
