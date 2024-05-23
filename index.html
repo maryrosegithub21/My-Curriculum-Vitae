@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Curriculum Vitae</title>
     <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 </head>
 <body>
 
@@ -42,10 +43,6 @@
             
             <button class="btn chat-btn" onclick="togglemenu()">Let's Chat</button>       
             <form id ="chatList" action="mailto:maryroseantoniowork21@gmail.com" method="post">
-                <!-- <div id="contact"> -->
-                <a href="https://www.seek.co.nz/profile/maryrose-antonio-rDqwRr3KiO" ><img src="Images/Seek.JPG" id="seek"/></a>
-                <a href="https://www.linkedin.com/in/mary-rose-antonio-321629263/" ><img src="Images/linked.JPG" id="linked_in"/></a>
-                <!-- </div> -->
                 <label>Name:</label><input type="text" name="name" placeholder="Fill in Name"/><br>
                 <label>Email:</label><input type="email" name="email" placeholder="abc@..."/><br>
                 <label>Phone:</label><input type="phone" name="phone" placeholder="number"/><br>
@@ -65,7 +62,7 @@
                 <img id="imagegrandchild3" src="Images/ImgLeft.jpg">
                 <div class="imagetext3">
             <ul>
-                <h1> EDUCATION: BS.Computer Science</h1> <h1> HOBBIES: Youtube,Coding,Editing</h1> <h1> RESIDENCE: New Zealand </h1>  
+                <h1> EDUCATION: BS.Computer Science</h1><br> <h1> HOBBIES: Youtube,Coding,Editing</h1><br> <h1> RESIDENCE: New Zealand </h1>  
             </ul>
                 </div>  
             </section>
@@ -79,26 +76,22 @@
     </div>
 
     <!-- ============== Email Chat List ======== -->
-<script>
- 
-    var chatList = document.getElementById("chatList");
-    chatList.style.maxHeight = "0px";
-    function togglemenu() {
-      if(chatList.style.maxHeight === "0px") 
-      {
-        chatList.style.maxHeight = "180px";
-      }
-      else 
-      {
-        chatList.style.maxHeight = "0px";
-      }
-    }
-</script>
-<div>
+    <script src="script.js"></script>
+<div id="footer-contact">
 <footer>
-    <h3>Copyright 2024 by Mary Rose Antonio, All rights</h3>
+    
     <!-- <i class="fa-brands fa-square-facebook"></i>
     <i class="fa-brands fa-linkedin"></i> -->
+    <!-- <div id="contact"> -->
+        <!-- <a href="https://www.seek.co.nz/profile/maryrose-antonio-rDqwRr3KiO" ><img src="Images/Seek.JPG" id="seek"/></a> -->
+        <a class="list-group-item" href="https://www.facebook.com/maryroseocampoantoniovlog?mibextid=LQQJ4d"><i class="fa-brands fa-square-facebook fa-2x fa-pull-left fa-border"></i></a>
+        <a class="list-group-item" href="https://www.linkedin.com/in/mary-rose-antonio-b340b0263?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"></a><i class="fa-brands fa-linkedin fa-2x fa-pull-left fa-border"></i></a>
+        <a class="list-group-item" href="https://www.instagram.com/maryrose.antonio.12/"></a><i class="fa-brands fa-instagram fa-2x fa-pull-left fa-border" ></i></a>
+
+        <!-- <a href="https://www.linkedin.com/in/mary-rose-antonio-321629263/" ><img src="Images/linked.JPG" id="linked_in"/></a> -->
+        <!-- </div> -->
+        <br><br><br><br><br>
+        <h3>Copyright 2024 by Mary Rose Antonio, All rights</h3>
 </footer>
 
 </div>
