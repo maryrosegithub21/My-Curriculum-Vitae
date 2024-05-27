@@ -7,6 +7,7 @@
     <title>My Curriculum Vitae</title>
     <link rel="stylesheet" href="style.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+     <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -30,7 +31,7 @@
     <li class="btn nav-link" id="about"><a href="#right">About</a></li> 
     <li class="btn nav-link" id="resume"><a href="https://drive.google.com/file/d/16MQ0ZrflIoX31oN3c6gPzgFoFvxCMTO9/view?usp=drive_link">Resume</a></li> 
     <li class="btn nav-link" id="contact"><a href="#left" onclick="togglemenu()">Contact</a></li> 
-    <li class="btn nav-link" id="portfolio"><a href="https://github.com/maryrosegithub21">Portfolio</a></li>   
+    <li class="btn nav-link" id="portfolio"><a href="#slideshow-container" onclick="">Portfolio</a></li>   
     </ul>
 </nav>
 <!-- <main> -->
@@ -74,9 +75,58 @@
         </div>
         
     </div>
+<!-- ====== Portfolio ======  -->
+<form id="slideshow-container">
+    <div class="slideshow-container" >
 
-    <!-- ============== Email Chat List ======== -->
-    <script src="script.js"></script>
+    <div class="mySlides fade">
+      <img class="imgSlide" src="Images/MatchingGame1.PNG">
+      <div class="text">This is the Log In or Register interface of user.</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <img class="imgSlide" src="Images/MatchingGame2.PNG">
+      <div class="text">This is the Map of the game.</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <img class="imgSlide" src="Images/MatchingGame3.PNG">
+      <div class="text">This is the game main interface of a puzzle game.</div>
+    </div>
+
+    <div class="mySlides fade">
+        <img class="imgSlide" src="Images/MatchingGame4.PNG">
+        <div class="text">This is the question interface which correct answer is accepted before moving to the next stage.</div>
+      </div>
+    <div class="mySlides fade">
+        <img class="imgSlide" src="Images/Library System 1.PNG">
+        <div class="text">This is a library system where you can search, update, borrow, add and delete books.</div>
+     </div>  
+     <div class="mySlides fade">
+        <img class="imgSlide" src="Images/Payroll1.PNG">
+        <div class="text">This is the input interface or most commonly known as calculation process.</div>
+     </div> 
+     <div class="mySlides fade">
+        <img class="imgSlide" src="Images/Payroll2.PNG">
+        <div class="text">This is the Output or Printed Payslip.</div>
+     </div> 
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+      <span class="dot" onclick="currentSlide(4)"></span> 
+      <span class="dot" onclick="currentSlide(5)"></span> 
+      <span class="dot" onclick="currentSlide(6)"></span> 
+      <span class="dot" onclick="currentSlide(7)"></span> 
+    </div>
+</form>
+<br>
 <div id="footer-contact">
 <footer>
     
