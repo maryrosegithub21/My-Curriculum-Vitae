@@ -14,7 +14,8 @@
     chatList.style.backgroundColor="white";
 
     // ===== For Lets Chat Button
-    function togglemenu() {
+    function togglemenu(event) {
+      event.preventDefault();
       if(chatList.style.maxHeight === "0px") 
       {
         chatList.style.maxHeight = "280px";
@@ -29,17 +30,20 @@
       }
     }
 // ========== for chat virtual function =========== //
-function chatContact(){
+function chatContact(event){
+  event.preventDefault();
 chatSpan.textContent = (contact);
 }
-function chatEmail(){
+function chatEmail(event){
+  event.preventDefault();
   chatSpan.textContent = (email);
 }
 
 // ============ Calendar Booking ======== //
 const calendar = document.getElementById("calendarBook");
 calendar.style.height ="0";
-function chatBook(){
+function chatBook(event){
+  event.preventDefault();
   if (calendar.style.height === "0px")
     {
       calendar.style.height = "280px";
@@ -53,11 +57,12 @@ function chatBook(){
 }
 //  ======== Reply Condition to Virtual Chat ==== //
 
-function chatInquiry(){
+function chatInquiry(event){
+  event.preventDefault();
   if (chat.textContent = " "){
     // chatList.style.maxHeight = "250px";
     // chatList.style.maxWidth = "50%";
-    chatSpan.textContent = "Please select above";
+    chatSpan.textContent = "Please select an option or typing your inquiry in english";
 
   } else {
     chatSpan.textContent = "Please book appointment";

@@ -43,7 +43,7 @@
             <h1>Hi I'm Mary Rose Antonio <br> Full Stack Software Developer</h1>
             <p>I am passionate about creating applications with a combination of logic and design to make accessible and user friendly. Technology moves toward and new applications are coming from time to time. Diversity in technology and industry is really important to me and I'm excited to continue my skills. </p>
             
-            <button class="btn chat-btn" onclick="togglemenu()">Let's Chat</button>  
+            <button class="btn chat-btn" onclick="togglemenu(event)">Let's Chat</button>  
             <form id ="chatList">
                 <div id="chat-div">
                     <!-- <div class="chat-boot-dvd"> -->
@@ -59,9 +59,9 @@
                     <br>
                     <br>
                     <label>You may want to ask:</label><br>
-                     <button class="btn contact" onclick="chatContact()">What is your Phone Number?</button><br>
-                     <button class="btn email" onclick="chatEmail()">What is your Email Address?</button><br>
-                     <button class="btn book" onclick="chatBook()">How to book an appointment?</button><br>
+                     <button class="btn contact" onclick="chatContact(event)">What is your Phone Number?</button><br>
+                     <button class="btn email" onclick="chatEmail(event)">What is your Email Address?</button><br>
+                     <button class="btn book" onclick="chatBook(event)">How to book an appointment?</button><br>
 
 
 
@@ -69,7 +69,7 @@
                      <label><span id="inquiry"></span></label>
                     </div>
                 <input type="text" name="text" placeholder="chat"/>
-                <button class="btn chat-reply" onclick="chatInquiry()">></button>
+                <button class="btn chat-reply" onclick="chatInquiry(event)">></button>
              </div>
             </form> 
             <!-- Google Calendar Appointment Scheduling begin -->

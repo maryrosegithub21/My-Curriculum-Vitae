@@ -79,81 +79,43 @@ grid-template-rows: [first] 38% [second] 24% [third] 21% [fourth] 20%;
 padding: 0px 0px;
 margin: 100px 5px;
 border: none;
-}
-
-}
-
-@media screen and (max-width: 700px){
-#imagegrandchild2 {
+height: 1100px;
 width: 100%;
-height: 5px;
-border: 2px solid rgb(15, 8, 8);
-object-fit: cover;
-object-position: 50% 50%;
-background-color: rgb(8, 8, 8);
-animation-name: box;
-animation-duration: 10s;
-animation-timing-function: linear;
-animation-iteration-count: infinite; 
-border-radius: 10%;
-position:relative;
 }
-
 }
-
-@media screen and (max-width: 700px){
-  #imagegrandchild3 {
-  width: 40%;
-  /* height: 1%; */
-  border: 2px solid rgb(15, 8, 8);
-  object-fit: cover;
-  object-position: 50% 50%;
-  background-color: rgb(8, 8, 8);
-  animation-name: box;
-  animation-duration: 10s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite; 
-  border-radius: 10%;
-  position:relative;
+@media screen and (max-width: 1500px){
+  #grandchild1 h1{
+  font-size: 10px;
+  margin: 0;
+  padding:0;
   }
-  
   }
+@media screen and (max-width: 1500px){
+    #grandchild1 p{
+    font-size: 10px;
+    margin:0;
+    padding:0;
+    }
+    }
+@media screen and (max-width: 1500px){
+      #grandchild4 p{
+      font-size: 12px;
+      }
+      }
+ @media screen and (max-width: 1500px){
+        .imagetext3 h1{
+        font-size: 10px;
 
-  @media screen and (max-width: 700px){
-    #imagetext3 {
-      background-color: rgb(9, 9, 9);
-      position: fixed;
-      margin: 5px 5px;
-      padding: 0;
-      color:white;
-      position: absolute;
-      font-size: 8px;
-      top: 30%;
-      left: 55%;
-    }
-    
-    }
-
-  @media screen and (max-width: 700px){
-    #grandchild3 h1 {
-    /* width: 5%; */
-    font-size: 12px;
-    }
-    
-    }
-    @media screen and (max-width: 700px){
-      #grandchild4 p {
-        font-size: 13px;
-        display:flex;
-width: 100%;
-color: white;
-text-indent: 30px;
-text-align: justify;
-padding: 5px;
-
-    }
-  }
-
+        }
+        }
+ @media screen and (max-width: 1500px){
+        #imagegrandchild3{
+        width: 50%;
+        
+        }
+        }
+ 
+ 
 /* ======== grandchild ======= */
 #grandchild1{
 background-color: black;
@@ -222,7 +184,7 @@ animation-iteration-count: infinite;
 border-radius: 50%;
 }
 .imagetext3{
-background-color: rgb(9, 9, 9);
+/* background-color: rgb(9, 9, 9); */
 position: fixed;
 margin: 5px 5px;
 padding: 0;
@@ -578,18 +540,16 @@ display:absolute; */
 #calendarBook {
   overflow: hidden;
   transition: 0.5s;
-  /* margin: 5px 5px; */
   width: 100%;
   background-color: white;
-  /* color: white; */
   position: absolute; 
   z-index: 50;
   height: 600px;
-  /* border: 5px solid black; */
-  /* left: 75%; */
-  /* border-radius: 5%; */
+ 
   }
-
+  /* @media screen and (max-width: 700px){
+  
+  } */
 form input{
 background-color: whitesmoke;
 border: 2px solid white;
