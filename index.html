@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
      <script src="script.js" defer></script>
+   
 </head>
 <body>
 
@@ -31,10 +32,10 @@
     <li class="btn nav-link" id="about"><a href="#right">About</a></li> 
     <li class="btn nav-link" id="resume"><a href="https://drive.google.com/file/d/16MQ0ZrflIoX31oN3c6gPzgFoFvxCMTO9/view?usp=drive_link">Resume</a></li> 
     <li class="btn nav-link" id="contact"><a href="#left" onclick="togglemenu()">Contact</a></li> 
-    <li class="btn nav-link" id="portfolio"><a href="#slideshow-container" onclick="">Portfolio</a></li>   
+    <li class="btn nav-link" id="portfolio"><a href="#slideshow-container-form" >Portfolio</a></li>   
     </ul>
 </nav>
-<!-- <main> -->
+<!-- =========<main> =======-->
     <div id="parent">
 
         <div id="child-el1">
@@ -42,13 +43,38 @@
             <h1>Hi I'm Mary Rose Antonio <br> Full Stack Software Developer</h1>
             <p>I am passionate about creating applications with a combination of logic and design to make accessible and user friendly. Technology moves toward and new applications are coming from time to time. Diversity in technology and industry is really important to me and I'm excited to continue my skills. </p>
             
-            <button class="btn chat-btn" onclick="togglemenu()">Let's Chat</button>       
-            <form id ="chatList" action="mailto:maryroseantoniowork21@gmail.com" method="post">
-                <label>Name:</label><input type="text" name="name" placeholder="Fill in Name"/><br>
-                <label>Email:</label><input type="email" name="email" placeholder="abc@..."/><br>
-                <label>Phone:</label><input type="phone" name="phone" placeholder="number"/><br>
-                <input type="submit" value="Email">
-            </form>
+            <button class="btn chat-btn" onclick="togglemenu()">Let's Chat</button>  
+            <form id ="chatList">
+                <div id="chat-div">
+                    <!-- <div class="chat-boot-dvd"> -->
+                        <i class="fas fa-robot"><span>Mary</span></i>
+                    <!-- <div class="text">This is the Output or Printed Payslip.</div> -->
+            
+                    <!-- </div> -->
+                <!-- <label>Name:</label><input type="text" name="name" placeholder="Fill in Name"/><br>
+                <label>Email:</label><input type="email" name="email" placeholder="abc@..."/><br> -->
+                <br>
+                <div id="chat-boot-lbl">
+                    <label>Hi I'm Mary Virtual Assistant and I'm here to help you! Select an option below to get started or start typing your inquiry in english.</label>
+                    <br>
+                    <br>
+                    <label>You may want to ask:</label><br>
+                     <button class="btn contact" onclick="chatContact()">What is your Phone Number?</button><br>
+                     <button class="btn email" onclick="chatEmail()">What is your Email Address?</button><br>
+                     <button class="btn book" onclick="chatBook()">How to book an appointment?</button><br>
+
+
+
+
+                     <label><span id="inquiry"></span></label>
+                    </div>
+                <input type="text" name="text" placeholder="chat"/>
+                <button class="btn chat-reply" onclick="chatInquiry()">></button>
+             </div>
+            </form> 
+            <!-- Google Calendar Appointment Scheduling begin -->
+<iframe id="calendarBook" src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1i4yjm0fNvKQdljsn7QC7rvvn77L5Qa0jUqfbp3l6fvVX-onbdbJcGrCfoLfkSScsHJsJsStah?gv=true" frameborder="0"></iframe>
+<!-- end Google Calendar Appointment Scheduling -->                
         </section>
         </div>
         <div id="child-el2">
@@ -75,47 +101,48 @@
         </div>
         
     </div>
-<!-- ====== Portfolio ======  -->
-<form id="slideshow-container">
+<!-- ========== Portfolio =========  -->
+<form id="slideshow-container-form">
     <div class="slideshow-container" >
 
-    <div class="mySlides fade">
+    <div class="mySlides">
       <img class="imgSlide" src="Images/MatchingGame1.PNG">
       <div class="text">This is the Log In or Register interface of user.</div>
     </div>
     
-    <div class="mySlides fade">
+    <div class="mySlides">
       <img class="imgSlide" src="Images/MatchingGame2.PNG">
       <div class="text">This is the Map of the game.</div>
     </div>
     
-    <div class="mySlides fade">
+    <div class="mySlides">
       <img class="imgSlide" src="Images/MatchingGame3.PNG">
       <div class="text">This is the game main interface of a puzzle game.</div>
     </div>
 
-    <div class="mySlides fade">
+    <div class="mySlides">
         <img class="imgSlide" src="Images/MatchingGame4.PNG">
         <div class="text">This is the question interface which correct answer is accepted before moving to the next stage.</div>
       </div>
-    <div class="mySlides fade">
+    <div class="mySlides">
         <img class="imgSlide" src="Images/Library System 1.PNG">
         <div class="text">This is a library system where you can search, update, borrow, add and delete books.</div>
      </div>  
-     <div class="mySlides fade">
+     <div class="mySlides">
         <img class="imgSlide" src="Images/Payroll1.PNG">
         <div class="text">This is the input interface or most commonly known as calculation process.</div>
      </div> 
-     <div class="mySlides fade">
+     <div class="mySlides">
         <img class="imgSlide" src="Images/Payroll2.PNG">
         <div class="text">This is the Output or Printed Payslip.</div>
      </div> 
+     <!-- ====== arrow click right and left ===== -->
     <a class="prev" onclick="plusSlides(-1)">❮</a>
     <a class="next" onclick="plusSlides(1)">❯</a>
     
     </div>
     <br>
-    
+    <!-- the dot at the bottom photos -->
     <div style="text-align:center">
       <span class="dot" onclick="currentSlide(1)"></span> 
       <span class="dot" onclick="currentSlide(2)"></span> 
@@ -125,26 +152,26 @@
       <span class="dot" onclick="currentSlide(6)"></span> 
       <span class="dot" onclick="currentSlide(7)"></span> 
     </div>
+    
 </form>
+
 <br>
 <div id="footer-contact">
-<footer>
-    
-    <!-- <i class="fa-brands fa-square-facebook"></i>
-    <i class="fa-brands fa-linkedin"></i> -->
-    <!-- <div id="contact"> -->
-        <!-- <a href="https://www.seek.co.nz/profile/maryrose-antonio-rDqwRr3KiO" ><img src="Images/Seek.JPG" id="seek"/></a> -->
+<footer id="foot">
+   
         <a class="list-group-item" href="https://www.facebook.com/maryroseocampoantoniovlog?mibextid=LQQJ4d"><i class="fa-brands fa-square-facebook fa-2x fa-pull-left fa-border"></i></a>
         <a class="list-group-item" href="https://www.linkedin.com/in/mary-rose-antonio-b340b0263?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"></a><i class="fa-brands fa-linkedin fa-2x fa-pull-left fa-border"></i></a>
         <a class="list-group-item" href="https://www.instagram.com/maryrose.antonio.12/"></a><i class="fa-brands fa-instagram fa-2x fa-pull-left fa-border" ></i></a>
-
-        <!-- <a href="https://www.linkedin.com/in/mary-rose-antonio-321629263/" ><img src="Images/linked.JPG" id="linked_in"/></a> -->
-        <!-- </div> -->
         <br><br><br><br><br>
         <h3>Copyright 2024 by Mary Rose Antonio, All rights</h3>
+    
+        
+   
+       
 </footer>
 
 </div>
+
 </body>
 <!-- </main> -->
 

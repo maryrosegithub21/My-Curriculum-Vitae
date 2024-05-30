@@ -1,160 +1,118 @@
-
- 
-    const chatList = document.getElementById("chatList");
+// ======= For Chat Form ====== //
+    const chatList = document.getElementById("chatList");    
+    const chatDiv = document.getElementById("chat-div");   
+    const chat = document.querySelector("input");
+    const chatSpan = document.getElementById("inquiry");
+    const contact = "My phone number is (027)210-8200";
+    const email = "My email address is maryroseantoniowork21@gmail.com";
+// ===== form chat virtual changes ==== //
     chatList.style.maxHeight = "0px";
+    chatList.style.margin = "0px";
+    chatList.style.padding = "0px";
+    chatList.style.display ="flex";
+    chatList.style.justifyContent = "end";
+    chatList.style.backgroundColor="white";
+
+    // ===== For Lets Chat Button
     function togglemenu() {
       if(chatList.style.maxHeight === "0px") 
       {
-        chatList.style.maxHeight = "180px";
+        chatList.style.maxHeight = "280px";
+        chatList.style.maxWidth = "100%";
+        chatDiv.style.height = "420px";
+        calendar.style.height = "0px";
+        chatSpan.textContent = "";
       }
       else 
       {
         chatList.style.maxHeight = "0px";
       }
     }
-// ========= SLIDE SHOW PHOTOS ====== 
-    // const portfolioCountToDisplay = document.getElementById("slideshow-container");
-    // portfolioCountToDisplay.style.maxHeight = "0px";
-    // function portfolioClick (){
-    // if(portfolioCountToDisplay.style.maxHeight === "0px") 
-    //   {
+// ========== for chat virtual function =========== //
+function chatContact(){
+chatSpan.textContent = (contact);
+}
+function chatEmail(){
+  chatSpan.textContent = (email);
+}
 
-    //     portfolioCountToDisplay.style.maxHeight = "500px";
-        
-
-    //   }
-    //   else 
-    //   {
-    //     portfolioCountToDisplay.style.maxHeight = "0px";
-    //   }
-
-    // }
-
-    // ======== Portfolio slideshow ========
-    let slideIndex = 1;
-    showSlides(slideIndex);
-    
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
+// ============ Calendar Booking ======== //
+const calendar = document.getElementById("calendarBook");
+calendar.style.height ="0";
+function chatBook(){
+  if (calendar.style.height === "0px")
+    {
+      calendar.style.height = "280px";
+      calendar.style.width = "100%";
+      chatList.style.maxHeight = "0px";
     }
-    
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
+    else
+    {
+      calendar.style.height = "0px";
     }
-    
-    function showSlides(n) {
-      let i;
-      let slides = document.getElementsByClassName("mySlides");
-      let dots = document.getElementsByClassName("dot");
-      if (n > slides.length) {slideIndex = 1}    
-      if (n < 1) {slideIndex = slides.length}
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-      }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex-1].style.display = "block";  
-      dots[slideIndex-1].className += " active";
-    }
-  
+}
+//  ======== Reply Condition to Virtual Chat ==== //
+
+function chatInquiry(){
+  if (chat.textContent = " "){
+    // chatList.style.maxHeight = "250px";
+    // chatList.style.maxWidth = "50%";
+    chatSpan.textContent = "Please select above";
+
+  } else {
+    chatSpan.textContent = "Please book appointment";
+  }
+}
+
+ // ======== Portfolio slideshow ======== //
+ let slideIndex = 1;
+ showSlides(slideIndex); 
+ function plusSlides(count) {
+   showSlides(slideIndex += count);
+ }
+ 
+ function currentSlide(count) {
+   showSlides(slideIndex = count);
+ }
+ 
+ function showSlides(count) {
+   let i;
+   let slides = document.getElementsByClassName("mySlides");
+   let dots = document.getElementsByClassName("dot");
+   if (count > slides.length) {slideIndex = 1}    
+   if (count < 1) {slideIndex = slides.length}
+   for (i = 0; i < slides.length; i++) {
+     slides[i].style.display = "none";  
+   }
+   for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" active", "");
+   }
+   slides[slideIndex-1].style.display = "block";  
+   dots[slideIndex-1].className += " active";
+ }
 
 
 
 
 
-// let slideIndex = 1;
-// showSlides(slideIndex);
+// console.log (event.target.value);
+// chat.addEventListener("input", chatInquiry);
+// 
+// For Auto Response
 
-// function plusSlides(n) {
-//   showSlides(slideIndex += n);
-// }
+// chat.addEventListener("input", chatResponse);
 
-// function currentSlide(n) {
-//   showSlides(slideIndex = n);
-// }
+// function chatResponse(){
+//   if (chatSpan.textContent = (event.target.value) ){
+//     // chatList.style.maxHeight = "250px";
+//     // chatList.style.maxWidth = "50%";
+//     chatSpan.textContent = "How Can I help you?";
 
-// function showSlides(n) {
-//   let i;
-//   let slides = document.getElementsByClassName("mySlides");
-//   let dots = document.getElementsByClassName("dot");
-//   if (n > slides.length) {slideIndex = 1}    
-//   if (n < 1) {slideIndex = slides.length}
-//   for (i = 0; i < slides.length; i++) {
-//     slides[i].style.display = "none";  
-//   }
-//   for (i = 0; i < dots.length; i++) {
-//     dots[i].className = dots[i].className.replace(" active", "");
-//   }
-//   slides[slideIndex-1].style.display = "block";  
-//   dots[slideIndex-1].className += " active";
-// }
-
-    // Portfolio Right
-    // const RightPortfolioButton = document.getElementById ("portfolioRight")
-    // RightPortfolioButton.style.display = "none";
-//     let count = 1;
-//     rightScroll (count);
-//     function plusSlides(n) {
-//       rightScroll(count += n);
-//     }
-    
-//     function currentSlide(n) {
-//       rightScroll(count = n);
-//     }
-//    function rightScroll(n){
-//     // img.style.display ="none";
-//     let img = document.getElementsByClassName("mySlides");
-//     if (n > img.length){count = 1}
-//     if (n < 1){count = img.length}
-//     for (let i = 0; i < img.length ; i++){
-//       img[i].style.display = "none";
-//       // console.log(img);
-//   }
-//   img[count-1].style.display = "block";
-// }
-  
-
-//   const img1 = document.getElementById('portfolioImages1');
-//   const img2 = document.getElementById('portfolioImages2');
-//   const img3 = document.getElementById('portfolioImages3');
-//   const img4 = document.getElementById('portfolioImages4');
-  
-//   if (img1.style.display === "block") {
-//     img2.style.display = "none";
-//     img3.style.display = "none";
-//     img4.style.display = "none";
-//   } else if (img2.style.display === "block") {
-//     img1.style.display = "none";
-//     img3.style.display = "none";
-//     img4.style.display = "none";
-//   } else if (img3.style.display === "block") {
-//     img1.style.display = "none";
-//     img2.style.display = "none";
-//     img4.style.display = "none";  
-//   } else if (img4.style.display === "block") {
-//     img1.style.display = "none";
-//     img2.style.display = "none";
-//     img3.style.display = "none";  
 //   } else {
-//     img1.style.display = "none";
-//     img2.style.display = "none";
-//     img3.style.display = "none";
-//     img4.style.display = "none";
+    
 //   }
-// }
 
-        // if (document.getElementById("portfolioImages1").style.visibility = "hidden"){
-          // document.getElementById("portfolioImages1").style.visibility = "visible"
-          // document.getElementById("portfolioImages2").style.visibility = "hidden"
-          // document.getElementById("portfolioImages3").style.visibility = "hidden"
-          // document.getElementById("portfolioImages4").style.visibility = "hidden"
-        // } else {
-          // document.getElementById("portfolioImages1").style.visibility = "hidden"
-          // document.getElementById("portfolioImages2").style.visibility = "hidden"
-          // document.getElementById("portfolioImages3").style.visibility = "hidden"
-          // document.getElementById("portfolioImages4").style.visibility = "hidden"
-        // }
-    // }
+
+
 
     
