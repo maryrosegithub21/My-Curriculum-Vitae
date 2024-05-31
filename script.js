@@ -59,15 +59,67 @@ function chatBook(event){
 
 function chatInquiry(event){
   event.preventDefault();
-  if (chat.textContent = " "){
-    // chatList.style.maxHeight = "250px";
-    // chatList.style.maxWidth = "50%";
-    chatSpan.textContent = "Please select an option or typing your inquiry in english";
+        if (chat.textContent = " "){
+          // chatList.style.maxHeight = "250px";
+          // chatList.style.maxWidth = "50%";
+          chatSpan.textContent = "Please select an option or typing your inquiry in english"; 
+          alert("Please select an option or typing your inquiry in english")
+      
+        } elseif (chat.textContent = "hi")
+        {
+          chatSpan.textContent = "Hello, How can I help you today or Please select option."
+          // chatSpan.textContent = "Please book appointment";
+        } elseif (chat.textContent = "how much")
+        chatSpan.textContent = "Its all Negotiable. Please book appointment for more information"
+        // chatSpan.textContent = "Please book appointment"; else {
 
-  } else {
-    chatSpan.textContent = "Please book appointment";
-  }
-}
+        
+      }
+    
+    
+  // // while (true){
+  
+  // if (chatSpan.textContent = "hi")
+  // {
+  //   chatSpan.textContent = "Hello, How can I help you today or Please select option."
+  // }
+  // if (chatSpan.textContent = "how much")
+  // {
+  //   chatSpan.textContent = "It's all Negotiable"
+  // }
+  // if (chatSpan.textContent = " " )
+  // {
+  //     chatSpan.textContent = "Please select an option or typing your inquiry in englsih";
+  //   // chatSpan.textContent = "Please book appointment";
+  // }
+  // // return
+// }
+// let x = 0;
+// while(true){
+//     if (x === 3){
+//         console.log("x is now 3")
+//     }
+//     if (x === 10){
+//         console.log("x is now 3")
+//     }
+//     if (x === 15){
+//         console.log("x is now 3")
+//     }
+// }
+ 
+
+    // if (chat.textContent = " "){
+    //       // chatList.style.maxHeight = "250px";
+    //       // chatList.style.maxWidth = "50%";
+    //       chatSpan.textContent = "Please select an option or typing your inquiry in english";
+      
+    //     } else {
+    //       chatSpan.textContent = "Please book appointment";
+    //     }
+    //   }
+  
+// }
+//   
 
  // ======== Portfolio slideshow ======== //
  let slideIndex = 1;
@@ -95,29 +147,3 @@ function chatInquiry(event){
    slides[slideIndex-1].style.display = "block";  
    dots[slideIndex-1].className += " active";
  }
-
-
-
-
-
-// console.log (event.target.value);
-// chat.addEventListener("input", chatInquiry);
-// 
-// For Auto Response
-
-// chat.addEventListener("input", chatResponse);
-
-// function chatResponse(){
-//   if (chatSpan.textContent = (event.target.value) ){
-//     // chatList.style.maxHeight = "250px";
-//     // chatList.style.maxWidth = "50%";
-//     chatSpan.textContent = "How Can I help you?";
-
-//   } else {
-    
-//   }
-
-
-
-
-    

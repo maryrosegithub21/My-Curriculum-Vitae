@@ -115,7 +115,53 @@ width: 100%;
         }
         }
  
- 
+ /* ===== small screen virtual chat==== */
+
+ @media screen and (max-width: 1500px){
+  #chat-boot-lbl label {
+   font-size: 8px;
+   margin: 0;
+   padding: 0;
+
+  }
+}
+@media screen and (max-width: 1500px){
+  #chat-boot-lbl button {
+   font-size: 9px;
+   padding: 0px 0px;
+   border: none;
+   margin: 0px 0px;
+   text-align: left;
+  }
+}
+@media screen and (max-width: 1500px){
+  input[type="text"]{
+   font-size: 9px;
+   /* background-color: rgb(195, 24, 24); */
+    border: 1px solid white;
+    border-bottom: 1px solid grey;
+/* border-radius: 1%; */
+  width: 50%;
+  height: 7%;
+  }
+}
+@media screen and (max-width: 1500px){
+  #chatlist{
+    overflow: hidden;
+    transition: 0.5s;
+    margin: 1px 1px;
+    width: 100%;
+    background-color: azure;
+    position: absolute;
+    z-index: 2;
+    height: 500px;
+    /* border: 5px solid black; */
+    /* left: 75%; */
+    border-radius: 5%;
+  }
+}
+
+
 /* ======== grandchild ======= */
 #grandchild1{
 background-color: black;
@@ -420,6 +466,7 @@ nav {
   justify-content: center;
   padding:3px 3px;
   margin: 1px 1px;
+  /* font-size: 5px; */
 }
 }
 @media screen and (max-width: 700px){
@@ -463,9 +510,7 @@ width: 99%;
 /* background-color: azure; */
 position: absolute;
 /* z-index: 2; */
-height: 350px;
-
-
+height: 500px;
 
 }
 #chat-div p{
@@ -547,9 +592,7 @@ display:absolute; */
   height: 600px;
  
   }
-  /* @media screen and (max-width: 700px){
-  
-  } */
+ 
 form input{
 background-color: whitesmoke;
 border: 2px solid white;
@@ -559,19 +602,7 @@ width: 80%;
 height: 10%;
 
 }
-input[type="submit"]{
 
-background: linear-gradient(white, grey);
-color: black;
-width: 20%;
-height: 10%;
-font-size: 15px;
-
-}
-input[type="submit"]:hover{
-/* width: 20%; */
-cursor: pointer;
-}
 
 /* =========Footer============== */
 #foot {
