@@ -46,13 +46,9 @@
             <button class="btn chat-btn" onclick="togglemenu(event)">Let's Chat</button>  
             <form id ="chatList">
                 <div id="chat-div">
-                    <!-- <div class="chat-boot-dvd"> -->
+                
                         <i class="fas fa-robot"><span>Mary</span></i>
-                    <!-- <div class="text">This is the Output or Printed Payslip.</div> -->
-            
-                    <!-- </div> -->
-                <!-- <label>Name:</label><input type="text" name="name" placeholder="Fill in Name"/><br>
-                <label>Email:</label><input type="email" name="email" placeholder="abc@..."/><br> -->
+                    
                 <br>
                 <div id="chat-boot-lbl">
                     <label>Hi I'm Mary Virtual Assistant and I'm here to help you! Select an option below to get started or start typing your inquiry in english.</label>
@@ -61,10 +57,10 @@
                     <label>You may want to ask:</label><br>
                      <button class="btn contact" onclick="chatContact(event)">What is your Phone Number?</button><br>
                      <button class="btn email" onclick="chatEmail(event)">What is your Email Address?</button><br>
-                     <button class="btn book" onclick="chatBook(event)">How to book an appointment?</button><br>
+                     <button class="btn book" onclick="chatBook(event)">Book an appointment?</button><br>
                      <label><span id="inquiry"></span></label>
                     </div>
-                <input type="text" name="text" placeholder="chat"/>
+                <input type="text" name="text" id ="input" placeholder="chat"/>
                 <button class="chat-reply" onclick="chatInquiry(event)">></button>
              </div>
             </form> 
