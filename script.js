@@ -1,5 +1,5 @@
 // ======= For Chat Form ====== //
-// ===== connection to html ===== //
+// ===== connection / calling id to html ===== //
     const chatList = document.getElementById("chatList");    
     const chatDiv = document.getElementById("chat-div");   
     const chat = document.getElementById("input");
@@ -23,7 +23,8 @@
         chatList.style.maxWidth = "100%";
         chatDiv.style.height = "420px";
         calendar.style.height = "0px";
-        chatSpan.textContent = "";
+        chatSpan.textContent = " ";
+        chat.value = " ";
       }
       else 
       {
@@ -47,8 +48,8 @@ function chatBook(event){
   event.preventDefault();
   if (calendar.style.height === "0px")
     {
-      calendar.style.height = "280px";
-      calendar.style.width = "100%";
+      calendar.style.height = "700px";
+      calendar.style.maxWidth = "1000px";
       chatList.style.maxHeight = "0px";
       chatSpan.textContent = "";
     }
@@ -58,39 +59,6 @@ function chatBook(event){
       chatSpan.textContent = "";
     }
 }
-//  ======== Reply Condition to Virtual Chat ==== //
-function chatInquiry(event) {
-  event.preventDefault();
-  const ans = chat.value;
-  if (ans === "hi") {
-    chatSpan.textContent =
-      "Hello, How can I help you?";
-  } else if (ans === "hello") {
-    chatSpan.textContent =
-      "Hi, How can I help you?";
-  } else if (ans === "how much") {
-    chatSpan.textContent =
-      "Its all Negotiable. Please book appointment for more information";
-  } else if (ans === " ") {
-    chatSpan.textContent =
-      "Please select an option or typing your inquiry in english";
-  } else if (ans === "who are you?") {
-    chatSpan.textContent =
-      "I'm Mary bot.Please select an option or typing your inquiry in english";
-  } else if (ans === "how are you?") {
-    chatSpan.textContent =
-      "I'm Fine.Please select an option or typing your inquiry in english";
-  } else if (ans === "are you human") {
-    chatSpan.textContent =
-      "No, I'm Virtual Assisatant.Please select an option or typing your inquiry in english";
-  } else if (ans === "are you bot") {
-    chatSpan.textContent =
-      "Yes, I'm Virtual Assisatant.Please select an option or typing your inquiry in english";
-  } else {
-    chatSpan.textContent = "I don't get what you mean. Please select an option";
-  }
-}
-
  // ======== Portfolio slideshow ======== //
  let slideIndex = 1;
  showSlides(slideIndex); 
@@ -121,3 +89,48 @@ function chatInquiry(event) {
    slides[slideIndex-1].style.display = "block";  
    dots[slideIndex-1].className += " active";
  }
+// ===== Virtual chat possible question ======= //
+// =========== Keyboard enter ======== ////
+chat.addEventListener("keypress", function (event) {
+  // The parameter event is of the type KeyboardEvent
+  if(event.key === 'Enter'){
+  chatInquiry(event);
+  chat.value = " ";
+  }
+});
+// ==== conditional statement for chat virtual ===== ////
+ function chatInquiry(event){
+  event.preventDefault();
+  
+  // chatInquiry.event.key === 'Enter'
+// if(event.key === 'Enter'){
+  const NAME = chat.value;
+      const matches = NAME.match(/\b[^\d\s]+\b/g);
+      if (matches && matches.length >= 2 ) {
+        chatSpan.textContent = "Please select an option or typing your inquiry in english";  
+        // Two or more words
+      } else if (matches && matches.length >= 2 || matches =="hi") {
+            // Two or more words
+            chatSpan.textContent = "Hello, How can I help you?";   
+     } else if (matches && matches.length >= 2 || matches =="hello") {
+            // Two or more words
+            chatSpan.textContent = "Hi, Im Mary. How can I help you?";  
+     } else if (matches && matches.length >= 2 || matches =="how much is the webpage") {
+            // Two or more words
+            chatSpan.textContent = "Its all negotiable, Please book an appointment for more information";  
+     } else if (matches && matches.length >= 2 || matches == "are you a human") {
+            // Two or more words
+            chatSpan.textContent = "No, Im Virtual Assistant";                 
+     } else if (matches && matches.length >= 2 || matches == "are you a bot") {
+            // Two or more words
+            chatSpan.textContent = "Yes, Please book an appointment to talk to human";                 
+    } else if (matches && matches.length >= 2 || matches == "how much" ) {
+      chatSpan.textContent = "Its all negotiable, Please book an appointment for more information";  
+    } else {
+          // Not enough words
+          chatSpan.textContent = "I don't get what you mean. Please select an option or typing in english";
+          return false;
+      }
+    }
+  // }
+// });
