@@ -286,7 +286,7 @@ padding: 15px;
 display: block;
   margin: 0px 0px;
   padding: 5px 10px;
-  width: 150px;
+  width: 200px;
   font-weight: 400;
   border: 1px solid white;
   background-color: black;
@@ -687,6 +687,7 @@ footer h3{
   vertical-align: middle;
   width: 100%;
   height: 450px;
+ 
   
 }
 
